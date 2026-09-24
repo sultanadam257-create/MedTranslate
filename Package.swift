@@ -5,5 +5,6 @@ let package = Package(
     name: "MedTranslate",
     platforms: [.macOS(.v15)],
     products: [.executable(name: "MedTranslate", targets: ["MedTranslate"])],
-    targets: [.executableTarget(name: "MedTranslate", path: "MedTranslate/Sources/MedTranslate")]
+    targets: [.executableTarget(name: "MedTranslate", path: "MedTranslate/Sources/MedTranslate")],
+    swiftLanguageModes: [.v5]
 )
