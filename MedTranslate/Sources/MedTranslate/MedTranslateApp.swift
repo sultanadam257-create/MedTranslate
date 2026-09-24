@@ -17,8 +17,5 @@ struct MedTranslateApp: App {
                     .disabled(store.course.transcript.isEmpty)
             }
         }
-        Settings {
-            SettingsView()
-        }
     }
 }
