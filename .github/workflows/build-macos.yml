@@ -1,0 +1,31 @@
+name: Construire MedTranslate
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compiler l’application
+        run: swift build -c release
+      - name: Créer l’application macOS
+        run: |
+          mkdir -p MedTranslate.app/Contents/MacOS
+          cp .build/release/MedTranslate MedTranslate.app/Contents/MacOS/MedTranslate
+          cp AppInfo.plist MedTranslate.app/Contents/Info.plist
+          codesign --force --deep --sign - MedTranslate.app
+      - name: Créer le DMG
+        run: hdiutil create -volname MedTranslate -srcfolder MedTranslate.app -ov -format UDZO MedTranslate.dmg
+      - name: Rendre le DMG téléchargeable
+        uses: actions/upload-artifact@v4
+        with:
+          name: MedTranslate-dmg
+          path: MedTranslate.dmg
+          if-no-files-found: error
