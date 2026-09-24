@@ -1,17 +1,17 @@
 # MedTranslate
 
-Application macOS native pour enregistrer un cours, transcrire l'anglais et produire une traduction médicale française rigoureuse.
+Application macOS native gratuite pour enregistrer un cours, transcrire l'anglais avec macOS et produire une traduction française sur l'appareil.
 
 ## Utilisation
 
-Au premier lancement, ouvrez **Réglages** et saisissez votre clé OpenAI. Elle est sauvegardée uniquement dans le Trousseau macOS, jamais dans ce dépôt.
+Au premier lancement, autorisez le microphone et la reconnaissance vocale. macOS peut demander de télécharger les langues anglaise et française une fois.
 
 1. Autorisez le microphone quand macOS le demande.
 2. Cliquez sur **Démarrer l'enregistrement**.
 3. Cliquez sur **Arrêter et traduire**.
 4. Exportez le cours en fichier Markdown si souhaité.
 
-La transcription utilise `gpt-transcribe`; la traduction utilise l'API Responses. Une connexion Internet et une clé API OpenAI avec facturation active sont nécessaires.
+Cette version n’utilise ni clé API, ni crédit OpenAI. La qualité de traduction dépend des langues Apple installées sur le Mac.
 
 ## Compilation
 
