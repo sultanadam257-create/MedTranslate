@@ -10,6 +10,7 @@
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleShortVersionString</key><string>1.0</string>
 <key>CFBundleVersion</key><string>1</string>
-<key>LSMinimumSystemVersion</key><string>13.0</string>
+<key>LSMinimumSystemVersion</key><string>15.0</string>
 <key>NSMicrophoneUsageDescription</key><string>MedTranslate utilise le microphone pour enregistrer vos cours à transcrire.</string>
+<key>NSSpeechRecognitionUsageDescription</key><string>MedTranslate utilise la reconnaissance vocale macOS pour transcrire vos cours en anglais.</string>
 </dict></plist>
