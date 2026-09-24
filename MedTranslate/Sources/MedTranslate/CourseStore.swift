@@ -35,7 +35,7 @@ final class CourseStore: ObservableObject {
 
     func exportCourse() {
         let panel = NSSavePanel()
-        panel.nameFieldStringValue = "\(course.title.replacingOccurrences(of: " ", with: "-"))\.md"
+        panel.nameFieldStringValue = "\(course.title.replacingOccurrences(of: " ", with: "-")).md"
         panel.allowedContentTypes = [.plainText]
         guard panel.runModal() == .OK, let url = panel.url else { return }
         let vocabulary = course.vocabulary.map { "- **\($0.english)** → \($0.french)" }.joined(separator: "\n")
